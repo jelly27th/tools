@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         HEX2SAE/hex2SAE.cpp HEX2SAE/hex2SAE.h
+        UI/h2s/h2s.h UI/h2s/h2s.cpp UI/h2s/h2s.ui
+        UI/StringCopy/stringcopy.h UI/StringCopy/stringcopy.cpp UI/StringCopy/stringcopy.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET tools APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

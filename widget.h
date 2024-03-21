@@ -2,6 +2,8 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "UI/h2s/h2s.h"
+#include "UI/StringCopy/stringcopy.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,15 +20,14 @@ public:
     ~Widget();
 
 private slots:
-    void on_input_clicked();
 
-    void on_output_clicked();
+    void on_h2s_clicked();
 
-    void on_hex2SAE_clicked();
-
-    void on_SAE2hex_clicked();
+    void on_StringCopy_clicked();
 
 private:
     Ui::Widget *ui;
+    h2s* h2s_windows = new h2s;
+    StringCopy* StringCopy_windows = new StringCopy;
 };
 #endif // WIDGET_H
