@@ -24,6 +24,10 @@ private slots:
 
     void on_SAE2hex_clicked();
 
+    void on_Return_clicked();
+
+    void paintEvent(QPaintEvent*);
+
 private:
     Ui::h2s *ui;
 };

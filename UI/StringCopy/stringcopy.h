@@ -25,6 +25,9 @@ private slots:
 
     void on_Input_out_clicked();
 
+    void on_Return_clicked();
+
+    void paintEvent(QPaintEvent*);
 private:
     Ui::StringCopy *ui;
     QString copyFile;

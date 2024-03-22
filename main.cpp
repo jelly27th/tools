@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include "QHBoxLayout"
 
 int main(int argc, char *argv[])
 {
@@ -18,6 +19,8 @@ int main(int argc, char *argv[])
         }
     }
     Widget w;
+    QHBoxLayout *layout = new QHBoxLayout(&w);
+    w.setLayout(layout);
     w.show();
     return a.exec();
 }

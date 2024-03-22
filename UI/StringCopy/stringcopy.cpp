@@ -1,6 +1,9 @@
 #include "stringcopy.h"
 #include "ui_stringcopy.h"
 #include "QFile"
+#include "../../widget.h"
+#include "QStyleOption"
+#include "QPainter"
 
 StringCopy::StringCopy(QWidget *parent)
     : QWidget(parent)
@@ -63,3 +66,18 @@ void StringCopy::on_Input_out_clicked()
     ui->lineEdit_input_2->setText(outFile);
 }
 
+
+void StringCopy::on_Return_clicked()
+{
+    Widget *main_windows = new Widget;
+    main_windows->show();
+    this->hide();
+    this->deleteLater();
+}
+
+void StringCopy::paintEvent(QPaintEvent*) {
+    QStyleOption opt;
+    opt.initFrom(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}

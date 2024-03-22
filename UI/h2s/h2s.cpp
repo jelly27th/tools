@@ -2,6 +2,9 @@
 #include "ui_h2s.h"
 #include "../../HEX2SAE/hex2SAE.h"
 #include "QFileDialog"
+#include "../../widget.h"
+#include "QStyleOption"
+#include "QPainter"
 
 h2s::h2s(QWidget *parent)
     : QWidget(parent)
@@ -54,5 +57,22 @@ void h2s::on_SAE2hex_clicked()
 
     fclose(ipf);
     fclose(opf);
+}
+
+
+void h2s::on_Return_clicked()
+{
+    Widget *main_windows = new Widget;
+    main_windows->show();
+    this->hide();
+    this->deleteLater();
+
+}
+
+void h2s::paintEvent(QPaintEvent*) {
+    QStyleOption opt;
+    opt.initFrom(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
 }
 
