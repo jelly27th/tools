@@ -1,0 +1,40 @@
+QString tmp = oriStr;
+            tmp.replace(subStr,str);
+            int pos = tmp.indexOf(str);
+            for (QChar *it=tmp.begin(); it!=tmp.end(); ) {
+                tmp.remove(pos+str.p1()-1, 1);
+                pos = tmp.indexOf(str, pos+str.p1());
+                if (-1 == pos) {
+                    it = tmp.end();
+                }
+            }
+QString tmp = oriStr;
+            tmp.replace(subStr,str);
+            int pos = tmp.indexOf(str);
+            for (QChar *it=tmp.begin(); it!=tmp.end(); ) {
+                tmp.remove(pos+str.p2()-1, 1);
+                pos = tmp.indexOf(str, pos+str.p2());
+                if (-1 == pos) {
+                    it = tmp.end();
+                }
+            }
+QString tmp = oriStr;
+            tmp.replace(subStr,str);
+            int pos = tmp.indexOf(str);
+            for (QChar *it=tmp.begin(); it!=tmp.end(); ) {
+                tmp.remove(pos+str.p3()-1, 1);
+                pos = tmp.indexOf(str, pos+str.p3());
+                if (-1 == pos) {
+                    it = tmp.end();
+                }
+            }
+QString tmp = oriStr;
+            tmp.replace(subStr,str);
+            int pos = tmp.indexOf(str);
+            for (QChar *it=tmp.begin(); it!=tmp.end(); ) {
+                tmp.remove(pos+str.p4()-1, 1);
+                pos = tmp.indexOf(str, pos+str.p4());
+                if (-1 == pos) {
+                    it = tmp.end();
+                }
+            }
