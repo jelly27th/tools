@@ -17,9 +17,9 @@ Tools is a personal small tool written by qt6, which has the following functions
 2. new a folder and place exe file from step 1.
 3. open qt cmd and go to current path.
 > cd path
-1. run command as follows.
+4. run command as follows.
 > windeployqt tools.exe
-1. use `Enigma Virtual Box` to packaged your programs.
+5. use `Enigma Virtual Box` to packaged your programs.
 
 ## Usage
 

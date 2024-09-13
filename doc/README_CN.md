@@ -19,8 +19,7 @@ Tools是用qt6编写的个人小工具，具有以下功能。
 > cd path
 4. 按如下方式运行命令。
 > windeployqt tools.exe
-
-1.使用`Enigma Virtual Box`打包您的程序。
+5. 使用`Enigma Virtual Box`打包您的程序。
 
 ## 如何使用
 
