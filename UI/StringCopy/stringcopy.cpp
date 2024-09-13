@@ -21,6 +21,7 @@ void StringCopy::on_Input_OK_clicked()
 {
     QString oriStr = ui->textEdit_StrOri->toPlainText();
     QString subStr = ui->subStr->toPlainText();
+    QStringList subStrList = subStr.split(",");
 
     QFile ipf(copyFile);
     QFile opf(outFile);
@@ -32,16 +33,24 @@ void StringCopy::on_Input_OK_clicked()
         while (!ipf.atEnd())
         {
             QByteArray line = ipf.readLine();
-            QString str(line);
+            QString rStr(line);
+            QStringList rStrList = rStr.split(",");
 
             QString tmp = oriStr;
-            tmp.replace(subStr,str);
-            int pos = tmp.indexOf(str);
-            for (QChar *it=tmp.begin(); it!=tmp.end(); ) {
-                tmp.remove(pos+str.size()-1, 1);
-                pos = tmp.indexOf(str, pos+str.size());
-                if (-1 == pos) {
-                    it = tmp.end();
+            for (int i = 0; i < rStrList.size(); i++) {
+                tmp.replace(subStrList[i],rStrList[i]);
+
+                /* remove `\n` added after executing Qtring.replace function */
+                if (i == (rStrList.size() - 1)) {
+                    QString str = rStrList[i];
+                    int pos = tmp.indexOf(str);
+                    for (QChar *it=tmp.begin(); it!=tmp.end(); ) {
+                        tmp.remove(pos+str.size()-1, 1);
+                        pos = tmp.indexOf(str, pos+str.size());
+                        if (-1 == pos) {
+                            it = tmp.end();
+                        }
+                    }
                 }
             }
             stream << tmp << "\n";
