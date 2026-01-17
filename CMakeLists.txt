@@ -34,6 +34,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         app_win32.rc
         image/bg.jpg
         image.qrc
+        UI/LaunchMultExe/launchmultexe.h UI/LaunchMultExe/launchmultexe.cpp UI/LaunchMultExe/launchmultexe.ui
+
         )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET tools APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

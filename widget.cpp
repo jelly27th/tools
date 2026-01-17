@@ -3,6 +3,7 @@
 #include "QFileDialog"
 #include "UI/h2s/h2s.h"
 #include "UI/StringCopy/stringcopy.h"
+#include "UI/LaunchMultExe/launchmultexe.h"
 #include "QStyleOption"
 #include "QPainter"
 
@@ -31,6 +32,13 @@ void Widget::on_h2s_2_clicked()
 {
     h2s* h2s_windows = new h2s;
     h2s_windows->show();
+    this->hide();
+}
+
+void Widget::on_LaunchMultExe_clicked()
+{
+    LaunchMultExe* LaunchMultExe_windows = new LaunchMultExe;
+    LaunchMultExe_windows->show();
     this->hide();
 }
 

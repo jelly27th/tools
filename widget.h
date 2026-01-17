@@ -23,6 +23,8 @@ private slots:
     void on_h2s_2_clicked();
 
     void paintEvent(QPaintEvent*);
+    void on_LaunchMultExe_clicked();
+
 private:
     Ui::Widget *ui;
 
